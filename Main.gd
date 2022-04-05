@@ -3,7 +3,7 @@ extends Control
 
 func _ready():
 	load_file()
-	$TextEdit.text = global.txt
+	$TabContainer/Tabs/TextEdit.text = global.txt
 	pass
 
 func save(content):
@@ -25,7 +25,7 @@ func load_file():
 #	pass
 
 func _process(delta):
-	global.txt = $TextEdit.text
+	global.txt = $TabContainer/Tabs/TextEdit.text
 	save(global.txt)
 	pass
 
